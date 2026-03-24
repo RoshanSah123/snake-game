@@ -7,7 +7,7 @@
 
 A modern, feature-rich Snake Game with stunning visual effects, progressive difficulty, and smooth animations. Built with pure HTML5, CSS3, and JavaScript.
 
-![Snake Game Preview](https://via.placeholder.com/600x400/0a0a2a/00ff9d?text=Snake+Game+Preview)
+![Snake Game Preview](https://roshansah123.github.io/snake-game)
 
 ## ✨ Features
 
