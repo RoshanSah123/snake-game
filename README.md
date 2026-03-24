@@ -6,8 +6,8 @@
 [![CSS3](https://img.shields.io/badge/CSS3-Animations-blue.svg)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 A modern, feature-rich Snake Game with stunning visual effects, progressive difficulty, and smooth animations. Built with pure HTML5, CSS3, and JavaScript.
-
-(https://roshansah123.github.io/snake-game)
+Let's Play
+https://roshansah123.github.io/snake-game
 
 ## ✨ Features
 
