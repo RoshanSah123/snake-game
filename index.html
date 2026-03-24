@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Snake Game | Premium Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <h1>🐍 SNAKE</h1>
+            <div class="header-glow"></div>
+        </div>
+        
+        <div class="game-stats">
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-info">
+                    <span class="stat-label">SCORE</span>
+                    <span id="score" class="stat-value">0</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-info">
+                    <span class="stat-label">BEST</span>
+                    <span id="highScore" class="stat-value">0</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-info">
+                    <span class="stat-label">LEVEL</span>
+                    <span id="level" class="stat-value">1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-wrapper">
+            <canvas id="gameCanvas" width="600" height="600"></canvas>
+            
+            <!-- Dynamic Effects Canvas -->
+            <canvas id="effectsCanvas" width="600" height="600" class="effects-canvas"></canvas>
+            
+            <!-- Start Screen -->
+            <div id="startScreen" class="overlay start-overlay">
+                <div class="overlay-content glass-effect">
+                    <div class="logo-container">
+                        <div class="snake-logo">🐍</div>
+                        <h2>SNAKE</h2>
+                        <div class="subtitle">PREMIUM EDITION</div>
+                    </div>
+                    <div class="feature-list">
+                        <div class="feature">
+                            <span class="feature-icon">🎮</span>
+                            <span>Arrow Keys Control</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">⚡</span>
+                            <span>Dynamic Speed System</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✨</span>
+                            <span>Particle Effects</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🎨</span>
+                            <span>Neon Graphics</span>
+                        </div>
+                    </div>
+                    <button id="startBtn" class="btn-glow">▶ START GAME</button>
+                    <div class="controls-hint">
+                        <span>← → ↑ ↓</span>
+                        <span>P - Pause</span>
+                        <span>R - Restart</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pause Screen -->
+            <div id="pauseScreen" class="overlay pause-overlay" style="display: none;">
+                <div class="overlay-content glass-effect">
+                    <div class="pause-icon">⏸️</div>
+                    <h2>GAME PAUSED</h2>
+                    <button id="resumeBtn" class="btn-glow">▶ RESUME</button>
+                    <button id="restartFromPauseBtn" class="btn-outline">🔄 RESTART</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-controls">
+            <button id="restartBtn" class="control-btn">
+                <span class="btn-icon">🔄</span>
+                <span>RESTART</span>
+            </button>
+            <button id="pauseBtn" class="control-btn">
+                <span class="btn-icon">⏸️</span>
+                <span>PAUSE</span>
+            </button>
+        </div>
+
+        <div id="gameOverModal" class="modal">
+            <div class="modal-content glass-effect">
+                <div class="gameover-animation">💀</div>
+                <h2>GAME OVER</h2>
+                <div class="score-summary">
+                    <div class="summary-item">
+                        <span>YOUR SCORE</span>
+                        <strong id="finalScore">0</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>BEST SCORE</span>
+                        <strong id="bestScore">0</strong>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <button id="modalRestartBtn" class="btn-glow">PLAY AGAIN</button>
+                    <button id="modalMenuBtn" class="btn-outline">MAIN MENU</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
